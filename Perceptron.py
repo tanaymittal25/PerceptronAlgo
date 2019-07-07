@@ -2,7 +2,7 @@ import numpy as np
 
 class Perceptron(object):
     
-    def __init__(self, inputs, maxIter = 100, rate = 0.01):
+    def __init__(self, inputs, maxIter = 1000, rate = 0.1):
         self.maxIter = maxIter
         self.rate = rate
         self.weights = np.zeros(inputs)
