@@ -12,8 +12,5 @@ output = np.array([0,0,0,1])
 percept = Perceptron(2)
 percept.train(training_inputs, output)
 
-inputs = np.array([1,1])
-print(percept.predict(inputs))
-
-inputs = np.array([1,1])
-print(percept.predict(inputs))
+for _ in training_inputs:
+    print(percept.predict(_))

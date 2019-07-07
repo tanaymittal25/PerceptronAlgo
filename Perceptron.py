@@ -22,3 +22,4 @@ class Perceptron(object):
                 prediction = self.predict(inputs)
                 self.weights += self.rate * (label - prediction) * inputs
                 self.bias += self.rate * (label - prediction)
+        print(self.weights, self.bias)
