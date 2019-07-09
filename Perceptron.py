@@ -2,7 +2,7 @@ import numpy as np
 
 class Perceptron(object):
     
-    def __init__(self, inputs, maxIter = 1000, rate = 0.1):
+    def __init__(self, inputs, maxIter = 50, rate = 0.01):
         self.maxIter = maxIter
         self.rate = rate
         self.weights = np.zeros(inputs)
@@ -22,4 +22,5 @@ class Perceptron(object):
                 prediction = self.predict(inputs)
                 self.weights += self.rate * (label - prediction) * inputs
                 self.bias += self.rate * (label - prediction)
+                print(self.weights, self.bias)
         print(self.weights, self.bias)
