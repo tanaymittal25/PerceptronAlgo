@@ -1,5 +1,5 @@
 import numpy as np
-from Perceptron import Perceptron
+from New_Perceptron import Perceptron
 
 training_input = []
 training_input.append(np.array([0.05, 0.7]))
@@ -13,7 +13,7 @@ training_input.append(np.array([0.9, 0.4]))
 
 output = np.array([1,0,1,0,1,1,0,0])
 
-percept = Perceptron(2)
+percept = Perceptron([1, 0], 0.2)
 percept.train(training_input, output)
 
 for _ in training_input:
